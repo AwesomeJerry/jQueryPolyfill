@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Demo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<script src="libs/jQuery/dist/jquery.min.js"></script>
+	<script src="jquery_polyfill.js"></script>
+</head>
+
+<body>
+	<div id="src">
+		<h2>$.fn.src</h2>
+		<img src="./img1.png">
+		<img src="./img2.png">
+		<button class="btn1">Get Img Src</button>
+		<button class="btn2">Set Img Src</button>
+	</div>
+	<hr>
+	<div id="class">
+		<h2>$.fn.class</h2>
+		<div class="aaa"></div>
+		<div class></div>
+		<div class="aaa bbb ccc"></div>
+		<button class="btn1">Get Class</button>
+		<!--		<button class="btn2">Set Img Src</button>-->
+	</div>
+
+	<script>
+		$(function () {
+			$('#class .btn1').on('click', function () {
+				console.debug($('.aaa').class());
+			});
+		})
+	</script>
+</body>
+
+</html>
